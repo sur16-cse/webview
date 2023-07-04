@@ -22,25 +22,25 @@ class _WebViewStackState extends State<WebViewStack> {
     widget.controller.setNavigationDelegate(
 
       NavigationDelegate(
-        onPageStarted: (url) {
-          setState(() {
-            loadingPercentage = 0;
-          });
-        },
-        onProgress: (progress) {
-          setState(() {
-            loadingPercentage = progress;
-          });
-        },
-        onPageFinished: (url) {
-          setState(() {
-            loadingPercentage = 100;
-          });
-          widget.controller.canGoForward();
-        },
-        onWebResourceError: (error) {
-          print('Web Resource Error: ${error.description}');
-        },
+          onPageStarted: (url) {
+            setState(() {
+              loadingPercentage = 0;
+            });
+          },
+          onProgress: (progress) {
+            setState(() {
+              loadingPercentage = progress;
+            });
+          },
+          onPageFinished: (url) {
+            setState(() {
+              loadingPercentage = 100;
+            });
+            widget.controller.canGoForward();
+          },
+          onWebResourceError: (error) {
+            print('Web Resource Error: ${error.description}');
+          },
           onNavigationRequest: (NavigationRequest request) {
             final host = Uri.parse(request.url).host;
             if(request.url.startsWith('https://zoom.us/signin')) {
@@ -57,16 +57,16 @@ class _WebViewStackState extends State<WebViewStack> {
                 ),
               );
               Navigator.pop(context);
-              widget.controller.goForward();
-              NavigationDecision.prevent;
+              // widget.controller.goForward();
+              // NavigationDecision.prevent;
             }
             return NavigationDecision.navigate;
           },
-        onUrlChange: (UrlChange change){
-          debugPrint('url change to ${change.url}');
-          counter++;
-          print(counter);
-        }
+          onUrlChange: (UrlChange change){
+            debugPrint('url change to ${change.url}');
+            counter++;
+            print(counter);
+          }
       ),
     );
     // ...to here.
