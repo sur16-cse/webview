@@ -44,6 +44,13 @@ class NavigationControls extends StatelessWidget {
             controller.reload();
           },
         ),
+        IconButton(
+          icon: const Icon(Icons.close),
+          onPressed: () async {
+             // Navigates back to the previous screen
+
+          },
+        ),
       ],
     );
   }

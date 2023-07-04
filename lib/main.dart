@@ -43,7 +43,7 @@ class _WebViewAppState extends State<WebViewApp> {
       ..setBackgroundColor(const Color(0x00000000))
       ..loadRequest(
         Uri.parse(
-            'https://zoom-sdk-sigma.vercel.app/meeting?id=5036513342&pwd=12345&user=test&jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZGtLZXkiOiIwcUpQMWl2MVNDMGFXNmJTTWF4dyIsIm1uIjoiNTAzNjUxMzM0MiIsInJvbGUiOjAsImlhdCI6MTY4ODM4MTMxMSwiZXhwIjoxNjg4Mzg4NTExLCJhcHBLZXkiOiIwcUpQMWl2MVNDMGFXNmJTTWF4dyIsInRva2VuRXhwIjoxNjg4Mzg4NTExfQ.79lf3huhvHh_N1FN7NmuFHzOfUykmRCNu14LzgBEjFE'),
+            'https://zoom-sdk-sigma.vercel.app/meeting?id=5036513342&pwd=12345&user=test&jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZGtLZXkiOiIwcUpQMWl2MVNDMGFXNmJTTWF4dyIsIm1uIjoiNTAzNjUxMzM0MiIsInJvbGUiOjAsImlhdCI6MTY4ODQ1NDk2NywiZXhwIjoxNjg4NDYyMTY3LCJhcHBLZXkiOiIwcUpQMWl2MVNDMGFXNmJTTWF4dyIsInRva2VuRXhwIjoxNjg4NDYyMTY3fQ.0aqLqZSZn7WfT1KujodU3oIAT9S1t40CdqoK5oYtZrE'),
         method: LoadRequestMethod.get,
       );
   }
